@@ -1,0 +1,29 @@
+{
+    "name": "moodle-assist",
+    "version": "1.0.0",
+    "description": "assists you by providing answers in moodle platform ",
+    "manifest_version": 3,
+    "author": "abishek",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "moodle-assist"
+    },
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+          "js": ["script.js"],
+          "module":true,
+          "matches": [
+            "https://moodle.bitsathy.ac.in/*"
+          ]
+        }
+      ],
+      "web_accessible_resources": [{
+        "matches": ["<all_urls>"],
+        "resources": ["https://esm.run/@google/generative-ai",
+                    "api.js"]
+      }]
+}
