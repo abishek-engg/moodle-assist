@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI('AIzaSyBPA8H-7OgYp9YrSrjlzZ0qZyu3FpLF14s');
+const genAI = new GoogleGenerativeAI('YOUR API');
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 function insertParagraphs() {
